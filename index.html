@@ -2,28 +2,36 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Youtbe Mp3 Downloader</title>
+    <title>YouTube Video Search App</title>
     <link rel="stylesheet" href="style.css" />
+    <!-- Google Fonts (Optional) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
       <div class="logo">
-        <img src="asset/youtube-svgrepo-com.svg" alt="yt logo" />
-        <h1>Youtube Search</h1>
+        <img src="asset/youtube-svgrepo-com.svg" alt="Logo" />
+        <h1>YouTube Search</h1>
       </div>
-
       <form id="search-form">
-        <input
-          type="text"
-          name=""
-          id="search-input"
-          placeholder="search"
-          required
-        />
+        <input type="text" id="search-input" placeholder="Search" />
         <button type="submit">Search</button>
       </form>
     </header>
+
+    <div id="video-list"></div>
+
+    <div id="video-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal">&times;</span>
+        <iframe id="video-player" frameborder="0" allowfullscreen></iframe>
+        <button id="download-mp3">Download as MP3</button>
+      </div>
+    </div>
 
     <script src="main.js"></script>
   </body>
